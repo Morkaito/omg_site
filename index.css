@@ -145,6 +145,7 @@ a:focus {
     background-repeat: no-repeat;
 }
 .instagram-section > img {
+    width: 100%;
     max-width: 400px;
 }
 
