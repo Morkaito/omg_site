@@ -1,7 +1,9 @@
 body {
-    padding-bottom: 30px;
     position: relative;
     min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -142,6 +144,7 @@ a:focus {
 .instagram-section{
     background-image: url('./instagram.png');
     padding: 50px;
+    width: 100%;
     background-repeat: no-repeat;
 }
 .instagram-section > img {
