@@ -95,7 +95,8 @@ a:focus {
 
 #navbar-wrapper {
     width: 100%;
-    position: absolute;
+    position: relative;
+    display: none;
     z-index: 2;
 }
 
@@ -270,15 +271,28 @@ a:focus {
     }
 
     #navbar-wrapper {
+        display: inline;
         position: relative;
+        width: 100%;
     }
+
+    #slides-section {
+        margin-top: 50px;
+    }
+
+    .sidebar-brand {
+        visibility: hidden;
+        display: none;
+    }
+
+    
 
     #wrapper.toggled {
         padding-left: 250px;
     }
 
     #content-wrapper {
-        position: relative;
+        position: absolute;
         top: 0;
     }
 

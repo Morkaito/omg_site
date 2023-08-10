@@ -35,14 +35,24 @@
             </ul>
         </aside>
 
+        <div id="navbar-wrapper">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
         <section id="content-wrapper">
-            <div class="row">
+            <div class="row" id="slides-section">
                 <div class="col-md-12 col-xs-12" style="padding: 0px">
                     <div class="img-wrapper">
                         <img class="gif" src="csg.gif" alt="">
                     </div>
 
-                    <section>
+                    <section id="slides">
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -73,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="row"style="padding: 0px">
+            <div class="row" style="padding: 0px">
                 <div class="col-md-21 col-xs-12" style="padding: 0px">
                     <section class="instagram-section d-flex align-items-center flex-column">
                         <img src="./instagram_link.png" alt="">
@@ -185,13 +195,14 @@
     </div>
 </body>
 <script>
-    const $button = document.querySelector('#sidebar-toggle');
+    const $buttons = document.querySelectorAll('#sidebar-toggle');
     const $wrapper = document.querySelector('#wrapper');
-
-    $button.addEventListener('click', (e) => {
-        e.preventDefault();
-        $wrapper.classList.toggle('toggled');
-    });
+    $buttons.forEach(($button) => {
+        $button.addEventListener('click', (e) => {
+            e.preventDefault();
+            $wrapper.classList.toggle('toggled');
+        });
+    })
 </script>
 
 </html>
