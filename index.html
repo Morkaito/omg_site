@@ -46,7 +46,7 @@
         </div>
 
         <section id="content-wrapper">
-            <div class="row" id="slides-section">
+            <div class="row">
                 <div class="col-md-12 col-xs-12" style="padding: 0px">
                     <div class="img-wrapper">
                         <img class="gif" src="csg.gif" alt="">
@@ -203,6 +203,14 @@
             $wrapper.classList.toggle('toggled');
         });
     })
+    document.addEventListener('scroll', (scrollEvent) => {
+        var nav = document.querySelector('.navbar');
+        if (window.pageYOffset >= 392) {
+            document.querySelector('.navbar').style.backgroundColor = "#212121"
+        } else {
+            document.querySelector('.navbar').style.background = "transparent"
+        }
+    });
 </script>
 
 </html>
