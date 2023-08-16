@@ -145,12 +145,14 @@ a:focus {
 }
 
 .instagram-section{
-    background-image: url('./instagram.png');
+    background-image: url('../img/insta_back.jpg');
+    background-position: center center;
+    background-size: cover;
     padding: 50px;
     width: 100%;
     background-repeat: no-repeat;
 }
-.instagram-section > img {
+.instagram-section > a > img {
     width: 100%;
     max-width: 400px;
 }

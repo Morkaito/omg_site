@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/followers.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+    <title>CSG Seguidores</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <aside id="sidebar-wrapper">
+            <div class="sidebar-brand">
+                <a href="#" class="navbar-brand" id="sidebar-toggle"><i style="color: #eee;" class="fa fa-bars"></i></a>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="active">
+                    <a href="#"><i class="fa fa-solid fa-house"></i>Início</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-regular fa-address-book pp"></i>Politicas de Privacidade</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-solid fa-cart-shopping"></i>Como Comprar</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div id="navbar-wrapper">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section id="content-wrapper">
+            <div class="row" style="padding: 0px;">
+                <div class="col-md-12 col-xs-12" style="padding: 0px">
+                    <div class="img-wrapper">
+                        <img class="gif" src="img/followers.gif" alt="">
+                    </div>
+
+                    <section id="fol" >
+                        <center>
+                            <h1
+                                style="font-family: 'Comfortaa', cursive; font-weight: 700; color: #4A86E8; font-size: 56px;">
+                                Qual serviço deseja adquirir?</h1>
+                            <br><br><br><br>
+                            <span><img src="./img/likes.gif" id="lof" alt=""></span><span><img id="lof"
+                                    src="./img/follow.gif" alt=""></span>
+                        </center>
+                    </section>
+
+                    <div class="img-wrapper">
+                        <img class="gif" src="img/back_followers_low.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style=" background-image: url('img/low-gradient.jpg'); background-size: cover;">
+                <div class="col-md-21 col-xs-12">
+                    <section>
+                        <center>
+                            <br>
+                            <h1 style="color: #eee; font-size: 56px;">
+                                Dúvida?</h1>
+                            <br><br><br><br>
+                            <img src="img/whats-button.png" style="width: 100%; max-width: 470px; padding: 0 50px" alt="">
+                            <br><br>
+                            <img src="img/csg-logo.png" alt="" style="max-width: 400px;">
+                        </center>
+                    </section>
+                </div>
+            </div>
+
+
+
+        </section>
+
+    </div>
+</body>
+<script>
+    const $buttons = document.querySelectorAll('#sidebar-toggle');
+    const $wrapper = document.querySelector('#wrapper');
+    $buttons.forEach(($button) => {
+        $button.addEventListener('click', (e) => {
+            e.preventDefault();
+            $wrapper.classList.toggle('toggled');
+        });
+    })
+    document.addEventListener('scroll', (scrollEvent) => {
+        var nav = document.querySelector('.navbar');
+        if (window.pageYOffset >= 392) {
+            document.querySelector('.navbar').style.backgroundColor = "#212121"
+        } else {
+            document.querySelector('.navbar').style.background = "transparent"
+        }
+    });
+</script>
+
+</html>

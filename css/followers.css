@@ -1,0 +1,17 @@
+.img-wrapper {
+    width: 100%;
+}
+
+.img-wrapper > img {
+    width: 100%;
+}
+
+#fol {
+    background-color: #FDC7FF;
+    padding: 90px 0px;
+}
+
+#lof {
+    max-width: 315px;
+    width: 100%;
+}
