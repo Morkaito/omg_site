@@ -7,6 +7,7 @@
 }
 
 #fol {
+    width: 100%;
     background-color: #FDC7FF;
     padding: 90px 0px;
 }
@@ -14,4 +15,16 @@
 #lof {
     max-width: 315px;
     width: 100%;
+}
+
+.buy-fol{
+    width: 100%;
+    max-width: 295px;
+    padding: 15px
+}
+.segitems > p {
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    padding-left: 350px;
 }
