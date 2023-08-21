@@ -52,6 +52,10 @@
     font-size: 56px;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 
 @media screen and (max-width: 300px) {
     .section-title {
