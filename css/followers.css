@@ -1,5 +1,5 @@
 body {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .img-wrapper {
@@ -31,7 +31,9 @@ body {
     width: 100%;
 }
 
-.segitems>p {
+.segitems> div > div{max-width: 1000px;}
+
+.segitems> div > div > p {
     text-align: left;
 }
 
@@ -44,7 +46,7 @@ body {
 
 .st {
     font-family: 'Comfortaa', cursive;
-    font-size: 5vw;
+    font-size: 3.8vw;
     width: 100%;
     margin: 0
 }
