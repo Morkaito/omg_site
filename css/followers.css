@@ -1,3 +1,7 @@
+body {
+    word-break: break-all;
+}
+
 .img-wrapper {
     width: 100%;
 }
@@ -42,7 +46,7 @@
 
 .st {
     font-family: 'Comfortaa', cursive;
-    font-size: 40px;
+    font-size: 7vw;
     width: 100%;
     margin: 0
 }
