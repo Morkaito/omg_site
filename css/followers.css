@@ -6,6 +6,83 @@ body {
     width: 100%;
 }
 
+/* The Modal (background) */
+.modall {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+#modal-input {
+    background-color: #D1D1CD;
+    border-radius: 20px;
+    padding-left: 17px;
+    height: 37px;
+    border: none;
+}
+
+/* Modal Content/Box */
+.modall-content {
+    background-image: linear-gradient(135deg,
+            hsl(203deg 61% 62%) 0%,
+            hsl(208deg 77% 64%) 4%,
+            hsl(217deg 89% 68%) 11%,
+            hsl(232deg 98% 75%) 21%,
+            hsl(258deg 96% 75%) 35%,
+            hsl(284deg 83% 69%) 52%,
+            hsl(282deg 63% 62%) 70%,
+            hsl(279deg 49% 55%) 86%,
+            hsl(277deg 41% 49%) 95%,
+            hsl(275deg 43% 42%) 100%,
+            hsl(273deg 45% 36%) 100%);
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 7px;
+    width: 80%;
+    max-width: 400px;
+    /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fields-modal>section>ul>li {
+    font-weight: 600;
+}
+
+/* The Close Button */
+.cllose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cllose:hover,
+.cllose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .img-wrapper>img {
     width: 100%;
 }
@@ -31,9 +108,11 @@ body {
     width: 100%;
 }
 
-.segitems> div > div{max-width: 1000px;}
+.segitems>div>div {
+    max-width: 1000px;
+}
 
-.segitems> div > div > p {
+.segitems>div>div>p {
     text-align: left;
 }
 
@@ -58,6 +137,47 @@ body {
 
 .no-margin {
     margin: 0;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+#paygo-btn {
+    padding: 18px 35px;
+    color: #FFF;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(90deg,
+            hsl(22deg 99% 54%) 0%,
+            hsl(13deg 100% 59%) 10%,
+            hsl(4deg 100% 63%) 20%,
+            hsl(354deg 100% 64%) 30%,
+            hsl(347deg 100% 62%) 40%,
+            hsl(341deg 97% 61%) 50%,
+            hsl(332deg 100% 58%) 60%,
+            hsl(324deg 100% 53%) 70%,
+            hsl(317deg 100% 50%) 80%,
+            hsl(310deg 100% 50%) 90%,
+            hsl(303deg 96% 50%) 100%);
 }
 
 

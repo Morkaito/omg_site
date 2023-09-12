@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <div id="wrapper">
 
         <aside id="sidebar-wrapper">
@@ -49,6 +50,40 @@
         </div>
 
         <div class="container-fluid">
+            <!-- The Modal -->
+            <div id="myModal" class="modall">
+                <!-- Modal content -->
+                <div class="modall-content">
+                    <div id="fields-modal">
+                        <h1 style="color: #eee; text-align: center;">Vamos <br> começar!</h1> <br>
+                        <input type="text" style="width: 100%;" id="modal-input" placeholder="Digite aqui o seu @...">
+                        <br><br>
+
+                        <section style="color: #333">
+                            <h3>Exemplo:</h3>
+                            <ul>
+                                <li>neymarjr</li>
+                                <li>anitta</li>
+                                <li>whinderssonnunes</li>
+                            </ul>
+                        </section>
+
+                        <section style="color: #eee">
+                            <h3>Formas de Pagamento:</h3>
+                            <ul>
+                                <li>PIX <i style="color:#333;" class="fa-brands fa-pix"></i></li>
+                                <li>Cartão de Crédito <i style="color:#333;" class="fa-solid fa-credit-card"></i></li>
+                                <li>Mercado Pago <span><img src="./img/mp-icon.png" width="28px" alt=""
+                                            srcset=""></span></li>
+                            </ul>
+                        </section>
+                        <br>
+                        <center><button id="paygo-btn"><span class="blink">CONTINUAR...</span></button></center>
+                        <span class="cllose">&times;</span>
+                    </div>
+                </div>
+
+            </div>
             <section id="content-wrapper">
                 <div class="row" style="padding: 0px;">
                     <div class="col-md-12 col-xs-12" style="padding: 0px">
@@ -58,6 +93,7 @@
                         <div class="img-wrapper"
                             style="background-image: url('img/top-low-gradient.png'); background-size: cover; color: #eee; font-family: 'Lato', 'sans-serif'; padding: 7px;">
                             <center>
+
                                 <h2 class="display-3" style=" margin: 18px 10px;">Quem somos?</h2>
                                 <p>
                                     Com mais de 40.000 mil pedidos entregues, a <span
@@ -70,6 +106,7 @@
                                     qualidade,
                                     juntamente com os serviços de engajamento para o seu perfil.</p>
                             </center>
+                            
                         </div>
 
                         <div class="img-wrapper">
@@ -83,17 +120,27 @@
                                 <br><br><br><br>
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-12" style="padding: 0;">
-                                            <img class="buy-fol" src="img/200m.gif" alt="">
-                                            <img class="buy-fol" src="img/500m.gif" alt="">
-                                            <img class="buy-fol" src="img/1000m.gif" alt="">
-                                            <img class="buy-fol" src="img/2000m.gif" alt="">
-                                            <img class="buy-fol" src="img/200br.gif" alt="">
-                                            <img class="buy-fol" src="img/500br.gif" alt="">
-                                            <img class="buy-fol" src="img/1000br.gif" alt="">
-                                            <img class="buy-fol" src="img/2000br.gif" alt="">
-                                            <img class="buy-fol" src="img/5000br.gif" alt="">
-                                            <img class="buy-fol" src="img/10kbr.gif" alt="">
+                                        <div class="col-md-12 buy-link" style="padding: 0;">
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/2aM25FP"
+                                                    class="buy-fol" src="img/200m.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/198xYUc"
+                                                    class="buy-fol" src="img/500m.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/18H9p8M"
+                                                    class="buy-fol" src="img/1000m.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/2nZymNw"
+                                                    class="buy-fol" src="img/2000m.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/2dGuhTz"
+                                                    class="buy-fol" src="img/200br.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/1mpPjF5"
+                                                    class="buy-fol" src="img/500br.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/22ThBnw"
+                                                    class="buy-fol" src="img/1000br.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/2q29Nfo"
+                                                    class="buy-fol" src="img/2000br.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/1uTrNY5"
+                                                    class="buy-fol" src="img/5000br.gif" alt=""></a>
+                                            <a id="myBtn" class="payments-links"><img href="http://mpago.la/2dwAoGE"
+                                                    class="buy-fol" src="img/10kbr.gif" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -322,24 +369,7 @@
     </div>
 </body>
 
-<script>
-    const $buttons = document.querySelectorAll('#sidebar-toggle');
-    const $wrapper = document.querySelector('#wrapper');
-    $buttons.forEach(($button) => {
-        $button.addEventListener('click', (e) => {
-            e.preventDefault();
-            $wrapper.classList.toggle('toggled');
-        });
-    })
-    document.addEventListener('scroll', (scrollEvent) => {
-        var nav = document.querySelector('.navbar');
-        if (window.pageYOffset >= 392) {
-            document.querySelector('.navbar').style.backgroundColor = "#212121"
-        } else {
-            document.querySelector('.navbar').style.background = "transparent"
-        }
-    });
-</script>
+<script src="./js/followers.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
