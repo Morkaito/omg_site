@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+
+    <title>CSG Seguidores</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <%- include('menu') %>
+
+            <section id="content-wrapper">
+                <div class="container h-100">
+                    <br><br><br>
+                    <div class="row d-flex h-100 justify-content-md-center align-items-center">
+                        <div class="col-md-10" style="background-color: #eee; border-radius: 10px; padding: 20px;">
+                            <table id="users_purchase" class="display table" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <td><b>Arroba</b></td>
+                                        <td><b>Plano</b></td>
+                                        <td><b>Data e hora</b></td>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+    </div>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url('img/back-adm.png');
+            background-size: cover;
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            $('#users_purchase').DataTable({
+                order: [
+                    [0, "desc"]
+                ],
+                serverSide: true,
+                processing: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json',
+                },
+                serverMethod: 'get',
+                ajax: {
+                    url: '/info_purchase',
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    dataSrc: 'result'
+                },
+                columns: [
+                    { data: 'arroba' },
+                    { data: 'plan' },
+                    { data: 'created_at' }
+                ],
+                select: true,
+                bFilter: false,
+                bInfo: false,
+                bPagination: false
+            });
+        });
+
+        const $buttons = document.querySelectorAll('#sidebar-toggle');
+        const $wrapper = document.querySelector('#wrapper');
+        $buttons.forEach(($button) => {
+            $button.addEventListener('click', (e) => {
+                e.preventDefault();
+                $wrapper.classList.toggle('toggled');
+            });
+        })
+        document.addEventListener('scroll', (scrollEvent) => {
+            var nav = document.querySelector('.navbar');
+            if (window.pageYOffset >= 392) {
+                document.querySelector('.navbar').style.backgroundColor = "#212121"
+            } else {
+                document.querySelector('.navbar').style.background = "transparent"
+            }
+        });
+
+
+    </script>
+</body>
+
+
+</html>
